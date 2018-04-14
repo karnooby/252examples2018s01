@@ -1,0 +1,18 @@
+class FizzBuzz:
+
+	def fibu(self, x):
+		return "FizzBuzz" if x % 15 == 0 else x
+
+	def fizz(self, x):
+		return "Fizz" if x % 3 == 0 else x
+
+	def buzz(self, x):
+		return "Buzz" if x % 5 == 0 else x
+
+	def count(self, x):
+		return list(range(1, x + 1))
+
+	def play(self, x):
+		numbers = self.count(x)
+		return list(map(lambda x: self.fizz(self.buzz(self.fibu(x)))
+			, numbers))
